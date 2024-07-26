@@ -65,8 +65,7 @@ public abstract class ChooseOriginScreenMixin extends OriginDisplayScreen {
         this.guiLeft = calculatedLeft + CHOICES_WIDTH + 10;
         this.pages = (int)Math.ceil((float) maxSelection / COUNT_PER_PAGE);
 
-        // Re-add the buttons with the correct position
-        initButtons();
+
 
         // Remove original "<" and ">" buttons
         Iterator<Renderable> iterator = this.renderables.iterator();
@@ -89,6 +88,8 @@ public abstract class ChooseOriginScreenMixin extends OriginDisplayScreen {
                 }
             }
         }
+        // Re-add the buttons with the correct position
+        initButtons();
     }
 
     @Inject(method = "render", at = @At("TAIL"))
@@ -157,7 +158,7 @@ public abstract class ChooseOriginScreenMixin extends OriginDisplayScreen {
             }).bounds(calculatedLeft, guiTop + windowHeight + 5, 20, 20).build());
             addRenderableWidget(Button.builder(Component.literal(">"), b -> {
                 currentPage = (currentPage + 1) % (pages);
-            }).bounds(calculatedLeft + CHOICES_WIDTH - 20, guiTop + windowHeight + 5, 20, 20).build());
+            }).bounds(this.guiLeft +176, guiTop + windowHeight + 5, 20, 20).build());
         }
     }
 
