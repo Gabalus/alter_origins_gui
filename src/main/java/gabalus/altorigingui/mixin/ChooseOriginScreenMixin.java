@@ -25,7 +25,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.*;
 import java.util.List;
 
-@Mod(Altorigingui.MODID)
 @Mixin(ChooseOriginScreen.class)
 public abstract class ChooseOriginScreenMixin extends OriginDisplayScreen {
 
