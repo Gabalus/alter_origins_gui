@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "gabalus.altorigingui.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "refmap": "mixins.altorigingui.refmap.json",
+  "mixins": [
+    "ChooseOriginScreenMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
